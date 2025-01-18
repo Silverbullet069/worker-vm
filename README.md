@@ -10,8 +10,8 @@ A `vm` library built on top of Deno's worker.
 import { VM } from "https://deno.land/x/worker_vm@v0.1.1/mod.ts";
 
 const vm = new VM({
-  timeoutMs: 30 * 1000
-  permissionOptions: "none" // { "net": ["example.com:443"], "read": ["foo.txt", "bar.txt"]}
+  timeoutMs: 30 * 1000,
+  permissionOptions: "none", // { "net": ["example.com:443"], "read": ["foo.txt", "bar.txt"]}
 }); // create a new VM Worker
 
 console.log(await vm.run("1 + 1")); // run code in the worker
